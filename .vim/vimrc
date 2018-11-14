@@ -108,10 +108,13 @@ endif
 " compatible.
 packadd matchit
 
+colorscheme desert
+
 set smartindent
 set hlsearch
 set number
 syntax on
+filetype on
 
 "set tab width
 set ts=4

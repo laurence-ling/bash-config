@@ -84,11 +84,8 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
 # some more ls aliases
-alias ll='ls -alF'
+alias ll='ls -alFh'
 alias la='ls -A'
 alias l='ls -CF'
 
@@ -116,19 +113,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-#dircolor
-eval "$(dircolors -b ~/.dircolors)"
+# added by Anaconda3 installer
+export PATH=/home/lcy/anaconda3/bin:$PATH
 
-#java
-export JAVA_HOME=/home/laurence/Downloads/software/jdk1.8.0_72
-export PATH=$PATH:$JAVA_HOME/bin
-export CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+export PS1="\[\[\e[m\]\[\e[32m\]\u\[\e[m\]\[\e[33m\]@\[\e[m\]\[\e[34m\]\h\[\e[m\]:\[\e[36m\]\w\[\e[m\]\$ "
 
-#python
-export PYTHONPATH=.:/usr/local/lib/python3.5/dist-packages:/home/laurence/Downloads/python-lib
-
-#bash color
-PS1='${debian_chroot:+($debian_chroot)}\[\033[00;36;01m\]\u\[\033[01;00;01m\]@\[\033[01;36;01m\]\h\[\033[00;31;01m\]:\[\033[00;00;01m\]\w \[\033[01;31;01m\]\$ \[\033[00;00;01m\]'
-
-#path
-export PATH=$PATH:/home/laurence/Documents/python
